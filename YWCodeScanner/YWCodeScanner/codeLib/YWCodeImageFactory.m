@@ -10,6 +10,7 @@
 
 @implementation YWCodeImageFactory
 
+//实现协议的构造方法
 - (instancetype)initWithFrame:(CGRect)frame{
     
     if ([super init]) {
@@ -133,8 +134,6 @@
 
     
 }
-
-
 /**
  生成一张带有颜色的二维码
  
@@ -165,7 +164,7 @@
 //    inputImage,
 //    inputColor0,
 //    inputColor1
-    NSLog(@"所有的key---%@",color_filter.inputKeys);
+    NSLog(@"CIFilter 所有的key---%@",color_filter.inputKeys);
     
     // 需要使用 CIColor
     [color_filter setValue:backgroundColor forKey:@"inputColor0"];
@@ -177,7 +176,6 @@
     
     return [UIImage imageWithCIImage:colorImage];
 
-    
 }
 
 @end

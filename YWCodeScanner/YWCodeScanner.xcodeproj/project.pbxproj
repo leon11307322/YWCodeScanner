@@ -120,10 +120,10 @@
 				DA632D631E642BA1002FFBA3 /* YWCodeLineView.h */,
 				DA632D641E642BA1002FFBA3 /* YWCodeLineView.m */,
 				DA632D651E642BA1002FFBA3 /* YWCodeScannerProtocol.h */,
-				DA632D6D1E643E6C002FFBA3 /* YWCodeImageFactory.h */,
-				DA632D6E1E643E6C002FFBA3 /* YWCodeImageFactory.m */,
 				DA632D661E642BA1002FFBA3 /* YWCodeView.h */,
 				DA632D671E642BA1002FFBA3 /* YWCodeView.m */,
+				DA632D6D1E643E6C002FFBA3 /* YWCodeImageFactory.h */,
+				DA632D6E1E643E6C002FFBA3 /* YWCodeImageFactory.m */,
 			);
 			path = codeLib;
 			sourceTree = "<group>";

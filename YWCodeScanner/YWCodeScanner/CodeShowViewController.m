@@ -30,7 +30,7 @@
     [super viewDidLoad];
 
     _factory = [YWCodeImageFactory new];
-//    标清
+//    标清--基本上不使用此方法
 //    _codeImage1.image = [_factory getCodeDefalutData:@"https://github.com/flyOfYW/YWCodeScanner.git"];
     
 //    高清
