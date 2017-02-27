@@ -13,12 +13,12 @@
 		DA632D431E641302002FFBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA632D411E641302002FFBA3 /* Main.storyboard */; };
 		DA632D451E641302002FFBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA632D441E641302002FFBA3 /* Assets.xcassets */; };
 		DA632D481E641302002FFBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA632D461E641302002FFBA3 /* LaunchScreen.storyboard */; };
-		DA632D521E641877002FFBA3 /* YWCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA632D511E641877002FFBA3 /* YWCodeView.m */; };
-		DA632D551E641BC8002FFBA3 /* YWCodeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA632D541E641BC8002FFBA3 /* YWCodeLineView.m */; };
-		DA632D581E641D7B002FFBA3 /* YWCodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DA632D571E641D7B002FFBA3 /* YWCodeFactory.m */; };
 		DA632D5A1E642320002FFBA3 /* pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA632D591E642320002FFBA3 /* pick_bg@2x.png */; };
 		DA632D5C1E64232C002FFBA3 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA632D5B1E64232C002FFBA3 /* line@2x.png */; };
 		DA632D5F1E642761002FFBA3 /* RootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA632D5E1E642761002FFBA3 /* RootTableView.m */; };
+		DA632D681E642BA1002FFBA3 /* YWCodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DA632D621E642BA1002FFBA3 /* YWCodeFactory.m */; };
+		DA632D691E642BA1002FFBA3 /* YWCodeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA632D641E642BA1002FFBA3 /* YWCodeLineView.m */; };
+		DA632D6A1E642BA1002FFBA3 /* YWCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA632D671E642BA1002FFBA3 /* YWCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,17 +32,17 @@
 		DA632D441E641302002FFBA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA632D471E641302002FFBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA632D491E641302002FFBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA632D4F1E641850002FFBA3 /* YWCodeScannerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeScannerProtocol.h; sourceTree = "<group>"; };
-		DA632D501E641877002FFBA3 /* YWCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeView.h; sourceTree = "<group>"; };
-		DA632D511E641877002FFBA3 /* YWCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCodeView.m; sourceTree = "<group>"; };
-		DA632D531E641BC8002FFBA3 /* YWCodeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeLineView.h; sourceTree = "<group>"; };
-		DA632D541E641BC8002FFBA3 /* YWCodeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCodeLineView.m; sourceTree = "<group>"; };
-		DA632D561E641D7B002FFBA3 /* YWCodeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeFactory.h; sourceTree = "<group>"; };
-		DA632D571E641D7B002FFBA3 /* YWCodeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCodeFactory.m; sourceTree = "<group>"; };
 		DA632D591E642320002FFBA3 /* pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pick_bg@2x.png"; sourceTree = "<group>"; };
 		DA632D5B1E64232C002FFBA3 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
 		DA632D5D1E642761002FFBA3 /* RootTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableView.h; sourceTree = "<group>"; };
 		DA632D5E1E642761002FFBA3 /* RootTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableView.m; sourceTree = "<group>"; };
+		DA632D611E642BA1002FFBA3 /* YWCodeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeFactory.h; sourceTree = "<group>"; };
+		DA632D621E642BA1002FFBA3 /* YWCodeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCodeFactory.m; sourceTree = "<group>"; };
+		DA632D631E642BA1002FFBA3 /* YWCodeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeLineView.h; sourceTree = "<group>"; };
+		DA632D641E642BA1002FFBA3 /* YWCodeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCodeLineView.m; sourceTree = "<group>"; };
+		DA632D651E642BA1002FFBA3 /* YWCodeScannerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeScannerProtocol.h; sourceTree = "<group>"; };
+		DA632D661E642BA1002FFBA3 /* YWCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCodeView.h; sourceTree = "<group>"; };
+		DA632D671E642BA1002FFBA3 /* YWCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +81,7 @@
 				DA632D3F1E641302002FFBA3 /* ViewController.m */,
 				DA632D5D1E642761002FFBA3 /* RootTableView.h */,
 				DA632D5E1E642761002FFBA3 /* RootTableView.m */,
-				DA632D4F1E641850002FFBA3 /* YWCodeScannerProtocol.h */,
-				DA632D501E641877002FFBA3 /* YWCodeView.h */,
-				DA632D511E641877002FFBA3 /* YWCodeView.m */,
-				DA632D531E641BC8002FFBA3 /* YWCodeLineView.h */,
-				DA632D541E641BC8002FFBA3 /* YWCodeLineView.m */,
-				DA632D561E641D7B002FFBA3 /* YWCodeFactory.h */,
-				DA632D571E641D7B002FFBA3 /* YWCodeFactory.m */,
+				DA632D601E642BA1002FFBA3 /* codeLib */,
 				DA632D411E641302002FFBA3 /* Main.storyboard */,
 				DA632D591E642320002FFBA3 /* pick_bg@2x.png */,
 				DA632D5B1E64232C002FFBA3 /* line@2x.png */,
@@ -105,6 +99,20 @@
 				DA632D391E641302002FFBA3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA632D601E642BA1002FFBA3 /* codeLib */ = {
+			isa = PBXGroup;
+			children = (
+				DA632D611E642BA1002FFBA3 /* YWCodeFactory.h */,
+				DA632D621E642BA1002FFBA3 /* YWCodeFactory.m */,
+				DA632D631E642BA1002FFBA3 /* YWCodeLineView.h */,
+				DA632D641E642BA1002FFBA3 /* YWCodeLineView.m */,
+				DA632D651E642BA1002FFBA3 /* YWCodeScannerProtocol.h */,
+				DA632D661E642BA1002FFBA3 /* YWCodeView.h */,
+				DA632D671E642BA1002FFBA3 /* YWCodeView.m */,
+			);
+			path = codeLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,10 +190,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA632D401E641302002FFBA3 /* ViewController.m in Sources */,
-				DA632D581E641D7B002FFBA3 /* YWCodeFactory.m in Sources */,
-				DA632D551E641BC8002FFBA3 /* YWCodeLineView.m in Sources */,
-				DA632D521E641877002FFBA3 /* YWCodeView.m in Sources */,
+				DA632D6A1E642BA1002FFBA3 /* YWCodeView.m in Sources */,
+				DA632D691E642BA1002FFBA3 /* YWCodeLineView.m in Sources */,
 				DA632D5F1E642761002FFBA3 /* RootTableView.m in Sources */,
+				DA632D681E642BA1002FFBA3 /* YWCodeFactory.m in Sources */,
 				DA632D3D1E641302002FFBA3 /* AppDelegate.m in Sources */,
 				DA632D3A1E641302002FFBA3 /* main.m in Sources */,
 			);
