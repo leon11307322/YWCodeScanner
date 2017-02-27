@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,6 +54,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ud-24-Wm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150" y="182"/>
+        </scene>
+        <!--Code Show View Controller-->
+        <scene sceneID="wMu-Lt-E5c">
+            <objects>
+                <viewController storyboardIdentifier="CodeShowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5eZ-cc-lbB" customClass="CodeShowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cJ0-MS-Tdg"/>
+                        <viewControllerLayoutGuide type="bottom" id="0kg-7E-2Hm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMB-Xp-esf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-PY-UuQ">
+                                <rect key="frame" x="127.5" y="30" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Fd-PY-UuQ" secondAttribute="height" id="9YP-cE-OW5"/>
+                                    <constraint firstAttribute="width" constant="120" id="N78-0H-uQv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dir-qS-bm1">
+                                <rect key="frame" x="127.5" y="320" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="NGB-aX-ScC"/>
+                                    <constraint firstAttribute="width" secondItem="dir-qS-bm1" secondAttribute="height" id="uPw-Q5-7gx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fvp-I9-2dg">
+                                <rect key="frame" x="127.5" y="175" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="OsC-E7-paS"/>
+                                    <constraint firstAttribute="width" secondItem="Fvp-I9-2dg" secondAttribute="height" id="hgO-8b-r4n"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Fd-PY-UuQ" firstAttribute="centerX" secondItem="Fvp-I9-2dg" secondAttribute="centerX" id="LuZ-1h-Mte"/>
+                            <constraint firstItem="Fvp-I9-2dg" firstAttribute="width" secondItem="Fvp-I9-2dg" secondAttribute="height" id="SMu-mY-hDu"/>
+                            <constraint firstItem="dir-qS-bm1" firstAttribute="top" secondItem="Fvp-I9-2dg" secondAttribute="bottom" constant="25" id="ajc-ys-RLo"/>
+                            <constraint firstItem="9Fd-PY-UuQ" firstAttribute="centerX" secondItem="zMB-Xp-esf" secondAttribute="centerX" id="d4g-fE-64c"/>
+                            <constraint firstItem="dir-qS-bm1" firstAttribute="width" secondItem="dir-qS-bm1" secondAttribute="height" id="dcp-qp-7Vy"/>
+                            <constraint firstItem="Fvp-I9-2dg" firstAttribute="top" secondItem="9Fd-PY-UuQ" secondAttribute="bottom" constant="25" id="i0U-xz-CYM"/>
+                            <constraint firstItem="9Fd-PY-UuQ" firstAttribute="top" secondItem="cJ0-MS-Tdg" secondAttribute="bottom" constant="10" id="iEc-ow-6Om"/>
+                            <constraint firstItem="Fvp-I9-2dg" firstAttribute="centerX" secondItem="dir-qS-bm1" secondAttribute="centerX" id="zrw-Xr-M6I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeImage1" destination="9Fd-PY-UuQ" id="26C-YC-1hK"/>
+                        <outlet property="codeImage2" destination="Fvp-I9-2dg" id="6x9-40-LAq"/>
+                        <outlet property="codeImage3" destination="dir-qS-bm1" id="LlK-mC-dNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dr3-Bz-fKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="259"/>
         </scene>
     </scenes>
 </document>

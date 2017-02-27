@@ -12,6 +12,23 @@
 
 @interface YWCodeFactory ()<AVCaptureMetadataOutputObjectsDelegate>
 
+//设备对象(实例化摄像头)
+@property (nonatomic,strong)AVCaptureDevice *device;
+
+//输入流对象
+@property (nonatomic,strong)AVCaptureDeviceInput *deviceInput;
+
+//输出流对象(元数据:描述数据特征的数据)
+//元数据:http://www.ruanyifeng.com/blog/2007/03/metadata.html
+@property (nonatomic,strong)AVCaptureMetadataOutput *output;
+
+//扫描会话
+@property (nonatomic,strong)AVCaptureSession *Session;
+
+//扫描图层
+@property (nonatomic,strong)AVCaptureVideoPreviewLayer *layer;
+
+
 @property (nonatomic) id<YWCodeScannerProtocol>codeFactory;
 
 @property (nonatomic) id<YWCodeScannerProtocol>codeLineFactory;
@@ -67,6 +84,8 @@
     //实例化扫描会话
     self.Session = [AVCaptureSession new];
     
+    [self.Session setSessionPreset:AVCaptureSessionPresetHigh];
+    
     //添加输入和输入流对象
     [self.Session addInput:self.deviceInput];
     [self.Session addOutput:self.output];
@@ -81,7 +100,7 @@
      AVMetadataObjectTypeCode39Mod43Code
      AVMetadataObjectTypeCode93Code
      */
-    self.output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeCode93Code];
+    self.output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code];
     
     
     //扫描图层
@@ -149,6 +168,11 @@
 
 - (void)delayMethod:(NSString *)value{
     
+    if (![_video isEqualToString:@""]&&_video) {
+        // 0、扫描成功之后的提示音
+        [self playSoundEffect:_video];
+    }
+    
     if (self.delegate && [self.delegate respondsToSelector:@selector(didmissViewValue:)]) {
         
         [self.delegate didmissViewValue:value];
@@ -159,6 +183,38 @@
     }
 }
 
+- (void)setVideo:(NSString *)video{
+    
+    _video = video;
+}
+
+#pragma mark - - - 扫描提示声
+/** 播放音效文件 */
+- (void)playSoundEffect:(NSString *)name{
+    // 获取音效
+    NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSURL *fileUrl = [NSURL fileURLWithPath:audioFile];
+    
+    // 1、获得系统声音ID
+    SystemSoundID soundID = 0;
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileUrl), &soundID);
+    
+    // 如果需要在播放完之后执行某些操作，可以调用如下方法注册一个播放完成回调函数
+    AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
+    
+    // 2、播放音频
+    AudioServicesPlaySystemSound(soundID); // 播放音效
+}
+/**
+ *  播放完成回调函数
+ *
+ *  @param soundID    系统声音ID
+ *  @param clientData 回调时传递的数据
+ */
+void soundCompleteCallback(SystemSoundID soundID, void *clientData){
+    NSLog(@"播放完成...");
+}
 
 
 @end

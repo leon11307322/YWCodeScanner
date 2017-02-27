@@ -15,8 +15,6 @@
 }
 @end
 
-
-
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -41,7 +39,10 @@
     
 ////  方法一：  使用代理获取扫描值
 //    _factory.delegate = self;
-//    
+    
+//    设置扫描完成后的铃声
+    _factory.video = @"sound.caf";
+//    开始扫描
     [_factory startQRCode:self.view];
     
 //    方法二：block回调
@@ -59,5 +60,8 @@
 //    
 //    [self dismissViewControllerAnimated:YES completion:nil];
 //}
+
+
+
 
 @end

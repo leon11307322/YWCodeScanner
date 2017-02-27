@@ -8,6 +8,7 @@
 
 #import "RootTableView.h"
 #import "ViewController.h"
+#import "CodeShowViewController.h"
 
 @interface RootTableView ()
 
@@ -34,14 +35,19 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"root" forIndexPath:indexPath];
     
- cell.textLabel.text = @"二维码扫描";
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"二维码扫描";
+
+    }else{
+        cell.textLabel.text = @"二维码生成";
+    }
     
     return cell;
 }
@@ -49,9 +55,20 @@
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    ViewController *vc = [[ViewController alloc]init];
+    if (indexPath.row == 0) {
+        ViewController *vc = [[ViewController alloc]init];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }else{
+        
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        CodeShowViewController *vc = [sb instantiateViewControllerWithIdentifier:@"CodeShowViewController"];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
     
-    [self presentViewController:vc animated:YES completion:nil];
+
     
 }
 
